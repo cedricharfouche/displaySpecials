@@ -50,11 +50,13 @@
         let theMessage;
         let theSpecial;
 
-        const specials = ["Peas & Rice ", "Rice with Chicken", "Lentils & Rice"]
-        const dayOfWeek = ["", "Monday's", "Tuesday's ", "Wednesday's", "Thursday's", "Friday's", ""];
+        const specials = ["Peas & Rice ", "Rice with Chicken", "Lentils & Rice", "Normal Menu"]
+        const dayOfWeek = ["Sunday", "Monday's", "Tuesday's ", "Wednesday's", "Thursday's", "Friday's", "Saturday"];
 
         theMessage = dayOfWeek[theDays];
-        if (theDays === 1) {
+        if (theDays === 0 || theDays===6){
+        		theSpecial = specials[3];
+        }else if (theDays === 1) {
             theSpecial = specials[0];
 
         } else if (theDays === 2) {
