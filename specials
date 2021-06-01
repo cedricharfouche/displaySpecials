@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            background-color: white;
+        }
+        #specFood {
+        		align-content: center;
+            color: #9f342d;
+            font: 30px Bitter;
+        }
+        #SpecHeading {
+        		align-content: center;
+        		margin-bottom: 6px;          
+            color: #9f342d;
+            font: 30px Bitter;
+        }
+
+        #SpecWord { 
+        		align-content: center;
+        		display: inline;
+            color: #9f342d;
+            font: 30px Bitter;
+        }
+
+        #Day { 
+        		align-content: center;
+            display: inline;
+            color: black;
+            font: 30px Bitter;
+        }
+
+        #Special {
+        		align-content: center;
+            color: black;
+            font: 30px Bitter;
+        }
+    </style>
+    <div id="SpecHeading"> 
+    	<p id="Day"></p>
+    	<p id="SpecWord"></p>
+    </div>
+    <div id="specFood">
+    	<p id="Special"></p>
+    </div>
+    <script>
+        let theDays = new Date().getDay();
+        let theMessage;
+        let theSpecial;
+
+        const specials = ["Peas & Rice ", "Rice with Chicken", "Lentils & Rice"]
+        const dayOfWeek = ["", "Monday's", "Tuesday's ", "Wednesday's", "Thursday's", "Friday's", ""];
+
+        theMessage = dayOfWeek[theDays];
+        if (theDays === 1) {
+            theSpecial = specials[0];
+
+        } else if (theDays === 2) {
+            theSpecial = specials[1];
+
+        } else if (theDays === 3 || theDays === 4 || theDays === 5) {
+            theSpecial = specials[2];
+
+        }
+        document.getElementById("Day").innerHTML = theMessage;
+        document.getElementById("SpecWord").innerHTML = "Special: ";
+        document.getElementById("Special").innerHTML = theSpecial;
+    </script>
+</head>
+
+<body></body>
+
+</html>
